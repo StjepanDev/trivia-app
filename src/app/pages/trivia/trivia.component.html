@@ -2,20 +2,26 @@
     <div class="content-wrapper">
         <div class="top-container">
             <div class="score-container">
-                Score : 10
+                Score : {{score}}
             </div>
             <div class="timer-container">
-                Time Left : 10 sec
+                Time Left : {{countdown}}
             </div>
         </div>
-        <div class="question-container">
-            <div class="question">
-                Which colour is the sky??
+        <div class="question-container" *ngIf="triviaService.questionsData.length !== 0">
+            <div class="question" [innerHTML]="triviaService.questionsData[questionIndex].question">
+                
             </div>
-            <button class="option" mat-button>green</button>
-            <button class="option" mat-button>gray</button>
-            <button class="option" mat-button>black</button>
-            <button class="option" mat-button>red</button>
+            <button 
+            [class.correct-option]="(userAnswer == option && userAnswer == triviaService.questionsData[questionIndex].correct_answer)
+             || (userAnswer != '' && userAnswer != option && option == triviaService.questionsData[questionIndex].correct_answer)
+             || (userAnswer == '' && countdown == 0 && option == triviaService.questionsData[questionIndex].correct_answer)"
+             [class.wrong-option]="userAnswer === option && userAnswer !== triviaService.questionsData[questionIndex].correct_answer"
+             (click)="selectAnswer(option)"
+             *ngFor="let option of triviaService.questionsData[questionIndex].incorrect_answers" 
+             class="option" mat-button>{{option}}
+            </button>
+    
         </div>
     </div>
 </div>

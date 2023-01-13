@@ -2,22 +2,18 @@
     <div class="content-wrapper">
         <mat-form-field>
             <mat-label>Name</mat-label>
-            <input matInput placeholder="Enter Your Name"/>
+            <input [(ngModel)]="triviaService.userName" matInput placeholder="Enter Your Name"/>
         </mat-form-field>
         <button routerLink="/trivia" mat-button class="start-button">Start</button>
         <h2>Leaderboard</h2>
         <div class="leaderboard">
             <div class="row">
-                <div class="name-col">Username</div>
-                <div class="score-col">Score</div>
+                <div class="u-col">Username</div>
+                <div class="s-col">Score</div>
             </div>
-            <div class="row">
-                <div class="name-col">Petsr Svatko</div>
-                <div class="score-col">485</div>
-            </div>
-            <div class="row">
-                <div class="name-col">Miroslav Mandjuk</div>
-                <div class="score-col">175</div>
+            <div class="row" *ngFor="let score of scores">
+                <div class="name-col">{{score.username}}</div>
+                <div class="score-col">{{score.score}}</div>
             </div>
         </div>
     </div>

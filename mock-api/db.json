@@ -1,0 +1,29 @@
+{
+  "leaderboard": [
+    {
+      "username": "mirek",
+      "score": 15,
+      "id": 1
+    },
+    {
+      "username": "darac",
+      "score": 5,
+      "id": 2
+    },
+    {
+      "username": "dvornikova",
+      "score": 15,
+      "id": 3
+    },
+    {
+      "username": "Plenki",
+      "score": 30,
+      "id": 4
+    },
+    {
+      "username": "Mislav",
+      "score": 20,
+      "id": 5
+    }
+  ]
+}

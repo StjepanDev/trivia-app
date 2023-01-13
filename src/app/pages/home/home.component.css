@@ -43,3 +43,18 @@ h2{
 .score-col{
     width:20%;
 }
+
+.u-col{
+    width: 80%;
+    font-weight: 600;
+
+}
+.s-col{
+    width:20%;
+    font-weight: 600;
+}
+
+
+.mat-mdc-button:not(:disabled) {
+	color: whitesmoke;
+}

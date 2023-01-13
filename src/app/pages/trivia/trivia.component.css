@@ -44,7 +44,8 @@
 }
 
 .question{
-    font-size: 28px;
+    
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
@@ -54,11 +55,11 @@
 }
 
 .correct-option{
-    background-color: rgb(20, 197, 20);
+    background-color: green;
     color: white;
 }
 
 .wrong-option{
-    background-color: rgb(201, 33, 27);
+    background-color:red;
     color: white;
 }
