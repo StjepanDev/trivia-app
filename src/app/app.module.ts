@@ -10,14 +10,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 
 import { TopbarComponent } from './components/topbar/topbar.component';
-import { HomeComponent } from './pages/home/home.component'; 
+import { HomeComponent } from './pages/home/home.component';
+import { TriviaComponent } from './pages/trivia/trivia.component'; 
+
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    HomeComponent
+    HomeComponent,
+    TriviaComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
