@@ -16,4 +16,3 @@ export class TriviaComponent implements OnInit {
 
   }
 }
-S
